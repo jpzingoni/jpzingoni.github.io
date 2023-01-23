@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+    min-height: 100%;
+    background-color: cadetblue;
+}
+
+nav{
+    display: flex;
+    justify-content: center ;
+}
+
+section{
+    margin: 0 auto;
+    width: 70%;
+    min-height: 60%;
+}
+
+p{
+    text-align: center;
+}
+
+section ul li{
+    display: block;
+    text-align: center;
+    background-color: #BDBDBD;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
+
+.personal-photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 170px;
+    height: 170px;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
