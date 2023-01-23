@@ -2,9 +2,20 @@ body{
     margin: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: cadetblue;
+    background-color: #83c59c;
 }
 
+p{
+    color: #EDF5E1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+header{
+    margin-top: 15px ;
+}
+
+header p{
+    text-align: center;
+}
 nav{
     display: flex;
     justify-content: center ;
@@ -16,7 +27,7 @@ section{
     min-height: 60vh;
 }
 
-p{
+section p{
     text-align: justify;
 }
 
@@ -26,26 +37,31 @@ section ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
 }
 section ul li{
-    display: inline-block;
-    text-align: center;
-    background-color: #BDBDBD;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #05386b;
+    margin: 5px;
     width: 200px;
     height: 50px;
 }
 
+li a{
+    text-decoration: none;
+    color: #EDF5E1;
+}
+
 footer p{
     text-align: center;
+    vertical-align: middle;
 }
 
 hr{
-    width: 80%;
+    width: 70%;
     border-color: black;
     margin: auto;
 }
@@ -54,11 +70,12 @@ hr{
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
 }
 .icon{
-    width: 40px;
-    height: 40px;
+    margin: 2px;
+    width: 35px;
+    height: 35px;
 }
 
