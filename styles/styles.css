@@ -1,7 +1,7 @@
 body{
     margin: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 97vh;
     background-color: #83c59c;
 }
 
@@ -24,7 +24,7 @@ nav{
 section{
     margin: 0 auto;
     width: 70%;
-    min-height: 60vh;
+    min-height: 47vh;
 }
 
 section p{
