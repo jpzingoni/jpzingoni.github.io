@@ -44,7 +44,7 @@ section ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #05386b;
+    background-color: #104880;
     margin: 7px;
     width: 200px;
     height: 45px;
@@ -55,6 +55,7 @@ section ul li{
 li a{
     text-decoration: none;
     color: #EDF5E1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 footer p{
