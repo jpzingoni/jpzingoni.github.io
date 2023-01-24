@@ -1,7 +1,7 @@
 body{
     margin: 0;
     width: 100%;
-    min-height: 97vh;
+    min-height: 96vh;
     background-color: #83c59c;
 }
 
@@ -24,7 +24,7 @@ nav{
 section{
     margin: 0 auto;
     width: 70%;
-    min-height: 47vh;
+    min-height: 46vh;
 }
 
 section p{
@@ -45,9 +45,11 @@ section ul li{
     align-items: center;
     justify-content: center;
     background-color: #05386b;
-    margin: 5px;
+    margin: 7px;
     width: 200px;
-    height: 50px;
+    height: 45px;
+    box-shadow: -7px 9px 7px black;
+    border: 3px solid black;
 }
 
 li a{
@@ -63,7 +65,9 @@ footer p{
 hr{
     width: 70%;
     border-color: black;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 .personal-photo{
     display: block;
@@ -78,4 +82,5 @@ hr{
     width: 35px;
     height: 35px;
 }
+
 
