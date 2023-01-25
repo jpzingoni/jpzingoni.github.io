@@ -7,28 +7,32 @@ body{
 
 p{
     color: #EDF5E1;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 header{
     margin-top: 15px ;
 }
 
-header p{
-    text-align: center;
-}
 nav{
     display: flex;
     justify-content: center ;
 }
 
 section{
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right: auto;
     width: 70%;
     min-height: 46vh;
 }
 
 section p{
     text-align: justify;
+    max-width: 360px;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 section ul{
@@ -45,9 +49,9 @@ section ul li{
     align-items: center;
     justify-content: center;
     background-color: #104880;
-    margin: 7px;
-    width: 200px;
-    height: 45px;
+    margin: 6px;
+    width: 165px;
+    height: 40px;
     box-shadow: -7px 9px 7px black;
     border: 3px solid black;
 }
@@ -61,6 +65,7 @@ li a{
 footer p{
     text-align: center;
     vertical-align: middle;
+    font-size: 12px;
 }
 
 hr{
@@ -68,20 +73,21 @@ hr{
     border-color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .personal-photo{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
 }
 .icon{
     margin: 2px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 
