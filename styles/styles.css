@@ -3,6 +3,7 @@ body{
     width: 100%;
     min-height: 96vh;
     background-color: #83c59c;
+    text-align: center;
 }
 
 p{
@@ -10,15 +11,13 @@ p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 5px;
     margin-bottom: 5px;
-    text-align: center;
 }
 header{
     margin-top: 15px ;
 }
 
-nav{
-    display: flex;
-    justify-content: center ;
+nav a{
+    display: inline-block;
 }
 
 section{
@@ -37,19 +36,16 @@ section p{
 
 section ul{
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: inline-block;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 section ul li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     background-color: #104880;
-    margin: 6px;
+    margin: 10px;
     width: 165px;
     height: 40px;
     box-shadow: -7px 9px 7px black;
@@ -57,6 +53,8 @@ section ul li{
 }
 
 li a{
+    padding: 9px;
+    display: block;
     text-decoration: none;
     color: #EDF5E1;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
