@@ -16,6 +16,28 @@ main{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
+}
+
+#chocolate-menu{
+    position: fixed;
+    padding: 1%;
+    width: 200px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    right: 5%;
+    top: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px black;
+    background-color: #303134;
+    display: none;
+}
+
+#chocolate-menu img{
+    width: 46px;
+    height: 46px;
 }
 header{
     display: flex;
@@ -48,14 +70,18 @@ a:hover{
     width: 90px;
     margin-right: 1%;
 }
+
 #showAppButton{
     width: 15px;
     height: 15px;
+    cursor: pointer;
 }
+
 #profilePhoto{
     width: 32px;
     height: 32px;
 }
+
 #logo{
     display: flex;
     justify-content: center;
@@ -226,7 +252,7 @@ footer{
     margin-right: 10%;
 }
 
-@media screen and (min-width: 400px){
+@media screen and (max-width: 950px){
     #links-footer{
         display: flex;
         justify-content: center;

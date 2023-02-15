@@ -88,4 +88,10 @@ hr{
     height: 30px;
 }
 
+@media screen and (max-width: 950px){
+    #links-footer{
+        display: flex;
+        justify-content: center;
+    }
+}
 
