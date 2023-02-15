@@ -1,7 +1,7 @@
 let $input = document.getElementById("barra-busqueda");
 let $buscador = document.getElementById("buscador");
 let $conteinerBuscador = document.getElementById("conteiner-buscador");
-let $botonesBuscador = document.getElementById("botones-buscador");
+let $botonesBuscador2 = document.getElementById("botones-buscador-2");
 let $main = document.getElementById("conteiner-total");
 let $busquedas = document.getElementById("busquedas");
 let $appButton = document.getElementById("showAppButton");
@@ -12,6 +12,7 @@ $input.addEventListener("click", function(){
     $conteinerBuscador.classList.add("agregadojs");
     $buscador.classList.add("agregadojs");
     $busquedas.style.display = "block";
+    $botonesBuscador2.style.display = "none";
     console.log(contadorInput)
 })
 
@@ -31,5 +32,8 @@ $main-addEventListener("click", function(){
     if(contadorInput > 1){
         $busquedas.style.display = "none";
         contadorInput = 0;
+    }
+    if($botonesBuscador2.style.display == "none" && $busquedas.style.display == "none"){
+        $botonesBuscador2.style.display = "flex";
     }
 })

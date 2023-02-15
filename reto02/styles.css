@@ -146,13 +146,14 @@ a:hover{
     /* border: 1px solid #5f6368; */
 }
 
-#botones-buscador{
+#botones-buscador-1, #botones-buscador-2{
     margin-top: 20px;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
-#botones-buscador button{
+#botones-buscador-1 button, #botones-buscador-2 button{
     margin: 5px;
     background-color: #303134;
     border: 1px solid #303134;
@@ -167,18 +168,26 @@ a:hover{
     font-size: 14px;
 }
 
-#botones-buscador :hover{
+#botones-buscador-1 button{
+    box-shadow: 1px 0px 4px black;
+}
+
+#botones-buscador-2 :hover{
     border: 1px solid #3c4043;
 }
 
 input{
     width: 70%;
     height: 30px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-color: transparent;
-    border: 0px;
+    /* border: 0px; */
     border-style: none;
     color: white;
+}
+
+input:focus {
+    outline: none;
 }
 
 #texto-copyright p a{
