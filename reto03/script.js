@@ -7,13 +7,13 @@ let $mainsection = document.getElementById("main-section");
 let $mainid = document.getElementById("main-id");
 let $listadetareas = document.getElementById("lista-de-tareas")
 let $item = document.getElementById("item");
+let $checkBoxCreado;
 
 $addbutton.addEventListener("click", function(){
     console.log("Click")
     $popup.setAttribute("id","pop-up-display")
     $mainsection.removeAttribute("id")
     //$mainsection.style.display = "none";
-
 })
 
 $closepopup.addEventListener("click", function(){
@@ -34,12 +34,15 @@ function crearDivLista(){
     let $crearIconoTarea = crearIconoTarea();
     let $crearLista = creandoLista();
     let $crearImgAddDel = crearImagenAddDelete();
+    let $crearCheckBox = crearCheckBox();
     let $div = document.createElement("div");
-    console.log($div)
     $div.appendChild($crearIconoTarea);
     $div.appendChild($crearLista);
+    $div.appendChild($crearCheckBox);
     $div.appendChild($crearImgAddDel);
     $div.setAttribute("id", "div-nuevo");
+    $div.style.borderRightColor = prioridadTarea();
+    chequearItem();
     return $div;
 }
 
@@ -83,4 +86,29 @@ function crearImagenAddDelete(){
     $canTrash.src = "/reto03/images/trash-can.png";
     $canTrash.setAttribute("id","img-list");
     return $canTrash;
+}
+
+function crearCheckBox(){
+    let $checkbox = document.createElement("img");
+    $checkbox.src ="/reto03/images/rectangle-box.png";
+    $checkbox.setAttribute("id", "img-list");
+    $checkBoxCreado = $checkbox;
+    return $checkbox;
+}
+function prioridadTarea(){
+    let $prioridad = document.querySelector('input[name="priority"]:checked');
+    if($prioridad.value == "priority-1"){
+        return "red";
+    }else if($prioridad.value == "priority-2"){
+        return "orange";
+    }else{
+        return "green"
+    }
+}
+
+function chequearItem(){
+    $checkBoxCreado.addEventListener("click", function(){
+        $checkbox = document.getElementById("img-list");
+        $checkbox.src ="/reto03/images/checked.png";
+    })
 }
