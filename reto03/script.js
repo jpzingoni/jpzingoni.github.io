@@ -66,13 +66,13 @@ function crearIconoTarea(){
     let valueTask = taskType.value;
     let $icon = document.createElement("img");
     if(valueTask == "work"){
-        $icon.src = "/images/work.png";
+        $icon.src = "/reto03/images/work.png";
     }else if(valueTask == "personal"){
-        $icon.src = "/images/personal.png";
+        $icon.src = "/reto03/images/personal.png";
     }else if(valueTask == "domestic"){
-        $icon.src = "/images/domestic.png";
+        $icon.src = "/reto03/images/domestic.png";
     }else{
-        $icon.src = "/images/fun.png";
+        $icon.src = "/reto03/images/fun.png";
     }
     $icon.setAttribute("id","icon-list")
     return $icon;
@@ -80,7 +80,7 @@ function crearIconoTarea(){
 
 function crearImagenAddDelete(){
     let $canTrash = document.createElement("img");
-    $canTrash.src = "/images/trash-can.png";
+    $canTrash.src = "/reto03/images/trash-can.png";
     $canTrash.setAttribute("id","img-list");
     return $canTrash;
 }
