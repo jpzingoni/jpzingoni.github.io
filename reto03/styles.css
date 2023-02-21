@@ -1,3 +1,6 @@
+*{
+    color: #FFFFFF;
+}
 html{
     height: 100%;
 }
@@ -16,7 +19,7 @@ body{
     width: 90%;
     height: 90%;
     background-color: #3F51B5;
-    border: 3px solid #BDBDBD;
+    border: 3px solid #ffd089;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -33,7 +36,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #BDBDBD;
+    border-bottom: 3px solid #ffd089;
+}
+
+#nav-bar p{
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
 }
 #profile-pic{
     height: 52px;
@@ -53,6 +61,10 @@ header{
     align-items: center;
     height: 80%;
     justify-content: space-around;
+}
+
+#main-id h1{
+    font-family: 'Montserrat', sans-serif;
 }
 
 section{
@@ -96,12 +108,13 @@ footer img{
     /* position: absolute; */
     margin-top: 5px;
     width: 40%;
-    height: 80%;
+    height: 74%;
     background-color: #C5CAE9;
-    border: 3px solid #BDBDBD;
+    border: 3px solid #ffd089;
     border-radius: 10px;
     display: none;
-    /* display: flex;
+    /*box-shadow: 5px 10px rgb(175, 171, 171);
+    display: flex;
     flex-direction: column;
     align-items: center;
     visibility: hidden; */
@@ -117,13 +130,14 @@ footer img{
     height: 10%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5%;
     align-items: center;
 }
 
 #pop-up-nav p{
+    color: black;
     text-align: center;
     flex: 1;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #close-pop-up{
@@ -140,9 +154,15 @@ footer img{
     align-items: center;
 }
 
+#form *{
+    margin: 2px;
+}
+
 #form label{
+    font-family: 'Montserrat', sans-serif;
     width: 65%;
     text-align: start;
+    color: black;
 }
 
 #task-name, #task-type, #description{
@@ -151,11 +171,20 @@ footer img{
 }
 
 #task-type{
-    height: auto;
+    width: 67%;
+    height: 30px;
+    background-color: #303F9F;
+    border: 3px solid #8BC34A;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
 }
 
 textarea{
     resize: none;
+    background-color: #303F9F;
+    border: 3px solid #8BC34A;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;  
 }
 
 #prioridades{
@@ -181,9 +210,10 @@ fieldset div label{
     flex: 1;
 }
 
-fieldset div p{
+#prioridades p{
+    color: black;
     text-align: start;
-    margin-left: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #tareas-agregadas{
@@ -194,6 +224,27 @@ fieldset div p{
     overflow-y: auto;
     /* visibility: hidden; */
     position: relative;
+}
+
+#priority-1 {
+    accent-color: red;
+}
+#priority-2 {
+    accent-color: orange;
+}
+#priority-3 {
+    accent-color: green;
+}
+#botones-form button{
+    width: 90px;
+    height: 30px;
+    padding: 2px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #303F9F;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 3px solid #8BC34A;
 }
 
 #lista-de-tareas{
@@ -241,6 +292,7 @@ ul li img{
     text-align: left;
     flex: 1;;
     margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #img-list{
