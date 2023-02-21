@@ -1,12 +1,86 @@
-let $addbutton = document.getElementById("add-button")
-let $popup = document.getElementById("pop-up")
-let $closepopup = document.getElementById("close-pop-up")
+let $addbutton = document.getElementById("add-button");
+let $popup = document.getElementById("pop-up");
+let $closepopup = document.getElementById("close-pop-up");
+let $agregartarea = document.getElementById("agregar");
+let $tareasagregadas = document.getElementById("tareas-agregadas");
+let $mainsection = document.getElementById("main-section");
+let $mainid = document.getElementById("main-id");
+let $listadetareas = document.getElementById("lista-de-tareas")
+let $item = document.getElementById("item");
 
 $addbutton.addEventListener("click", function(){
     console.log("Click")
-    $popup.style.visibility = "visible";
+    $popup.setAttribute("id","pop-up-display")
+    $mainsection.removeAttribute("id")
+    //$mainsection.style.display = "none";
+
 })
 
 $closepopup.addEventListener("click", function(){
-    $popup.style.visibility = "hidden";
+    $mainsection.setAttribute("id", "main-section");
+    $popup.removeAttribute("id")
 })
+
+$agregartarea.addEventListener("click", function(){
+    $mainsection.setAttribute("id", "main-section");
+    $tareasagregadas.style.display = "block";
+    $popup.removeAttribute("id")
+    $mainid.style.display = "none";
+    let $divLista = crearDivLista();
+    $listadetareas.appendChild($divLista);
+})
+
+function crearDivLista(){
+    let $crearIconoTarea = crearIconoTarea();
+    let $crearLista = creandoLista();
+    let $crearImgAddDel = crearImagenAddDelete();
+    let $div = document.createElement("div");
+    console.log($div)
+    $div.appendChild($crearIconoTarea);
+    $div.appendChild($crearLista);
+    $div.appendChild($crearImgAddDel);
+    $div.setAttribute("id", "div-nuevo");
+    return $div;
+}
+
+function creandoLista(){
+    let $descripcionAAgregar = descripciontarea();
+    let $textoli = document.createTextNode($descripcionAAgregar);
+    let $li =document.createElement("li");
+    $li.appendChild($textoli);
+    $li.setAttribute("id", "li-js");
+    return $li;
+}
+
+function descripciontarea(){
+    let descripcion = document.getElementById("description").value
+    if(descripcion == ""){
+        return "no ingresaste ninguna descripción"
+    }else{
+        return descripcion
+    }
+}
+
+function crearIconoTarea(){
+    let taskType = document.getElementById("task-type");
+    let valueTask = taskType.value;
+    let $icon = document.createElement("img");
+    if(valueTask == "work"){
+        $icon.src = "/images/work.png";
+    }else if(valueTask == "personal"){
+        $icon.src = "/images/personal.png";
+    }else if(valueTask == "domestic"){
+        $icon.src = "/images/domestic.png";
+    }else{
+        $icon.src = "/images/fun.png";
+    }
+    $icon.setAttribute("id","icon-list")
+    return $icon;
+}
+
+function crearImagenAddDelete(){
+    let $canTrash = document.createElement("img");
+    $canTrash.src = "/images/trash-can.png";
+    $canTrash.setAttribute("id","img-list");
+    return $canTrash;
+}

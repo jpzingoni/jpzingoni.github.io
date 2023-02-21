@@ -6,7 +6,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: aqua;
+    background-color: #C5CAE9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +15,8 @@ body{
 .container{
     width: 90%;
     height: 90%;
-    background-color: beige;
-    border: 1px solid black;
+    background-color: #3F51B5;
+    border: 3px solid #BDBDBD;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -26,24 +26,49 @@ body{
 header{
     border-radius: 9px 9px 0px 0px;
     width: 100%;
-    background-color:blue;
+    background-color:#303F9F;
 }
 #nav-bar{
     padding: 7px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #BDBDBD;
 }
-#nav-bar img{
+#profile-pic{
     height: 52px;
     width: 52px;
+    cursor: pointer;
 }
-section{
-    height: 100%;
-    width: 100%;
+#bar-lines{
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#main-id{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80%;
+    justify-content: space-around;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
     margin-top: 3%;
+}
+
+#main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #main-image{
     height: 120px;
@@ -51,7 +76,8 @@ section{
 }
 
 div ul li{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
 }
 
 footer{
@@ -62,34 +88,48 @@ footer{
 }
 
 footer img{
+    cursor: pointer;
     padding: 7px;
 }
 
 .pop-up{
-    position: absolute;
+    /* position: absolute; */
+    margin-top: 5px;
     width: 40%;
     height: 80%;
-    background-color: beige;
-    border: 1px solid black;
+    background-color: #C5CAE9;
+    border: 3px solid #BDBDBD;
     border-radius: 10px;
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden; */
+}
+
+#pop-up-display{
     display: flex;
     flex-direction: column;
     align-items: center;
-    visibility: hidden;
 }
-
 #pop-up-nav{
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
     margin-bottom: 5%;
+    align-items: center;
+}
+
+#pop-up-nav p{
+    text-align: center;
+    flex: 1;
 }
 
 #close-pop-up{
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 #form{
@@ -98,6 +138,11 @@ footer img{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#form label{
+    width: 65%;
+    text-align: start;
 }
 
 #task-name, #task-type, #description{
@@ -109,9 +154,101 @@ footer img{
     height: auto;
 }
 
-/* fieldset label{
-    border-right: 1px solid black;
-} */
+textarea{
+    resize: none;
+}
+
+#prioridades{
+    width: 65%;
+}
+
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+fieldset div label{
+    margin-left: 10px;
+    flex: 1;
+}
+
+fieldset div p{
+    text-align: start;
+    margin-left: 2px;
+}
+
+#tareas-agregadas{
+    display: none;
+    margin-top: 10px;
+    width: 80%;
+    height: 90%;
+    overflow-y: auto;
+    /* visibility: hidden; */
+    position: relative;
+}
+
+#lista-de-tareas{
+    
+    padding: 0;
+    width: 99%;
+    max-height: 80%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+    border-right-color: red;
+}
+ul li img{
+    width: 40px;
+    height: 40px;
+}
+
+#div-nuevo{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    border: 3px solid #BDBDBD;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+#icon-list{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#li-js{
+    border: none;
+    list-style: none;
+    width: 70%;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+    flex: 1;;
+    margin-left: 15px;
+}
+
+#img-list{
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 800px){
     .pop-up{
