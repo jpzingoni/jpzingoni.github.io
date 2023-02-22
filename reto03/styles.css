@@ -37,6 +37,7 @@ header{
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #ffd089;
+    height: 100%;
 }
 
 #nav-bar p{
