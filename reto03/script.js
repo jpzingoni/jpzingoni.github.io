@@ -28,6 +28,7 @@ $agregartarea.addEventListener("click", function(){
     $mainid.style.display = "none";
     let $divLista = crearDivLista();
     $listadetareas.appendChild($divLista);
+    chequearItem();
 })
 
 function crearDivLista(){
@@ -40,9 +41,9 @@ function crearDivLista(){
     $div.appendChild($crearLista);
     $div.appendChild($crearCheckBox);
     $div.appendChild($crearImgAddDel);
-    $div.setAttribute("id", "div-nuevo");
+    $div.setAttribute("class", "div-nuevo");
     $div.style.borderRightColor = prioridadTarea();
-    chequearItem();
+    //chequearItem();
     return $div;
 }
 
@@ -52,6 +53,10 @@ function creandoLista(){
     let $li =document.createElement("li");
     $li.appendChild($textoli);
     $li.setAttribute("id", "li-js");
+    let inputDescripcion = document.getElementById("description");
+    inputDescripcion.value ="";
+    let inputTituloTarea = document.getElementById("task-name");
+    inputTituloTarea.value = "";
     return $li;
 }
 
@@ -77,21 +82,21 @@ function crearIconoTarea(){
     }else{
         $icon.src = "/reto03/images/fun.png";
     }
-    $icon.setAttribute("id","icon-list")
+    $icon.setAttribute("class","icon-list")
     return $icon;
 }
 
 function crearImagenAddDelete(){
     let $canTrash = document.createElement("img");
     $canTrash.src = "/reto03/images/trash-can.png";
-    $canTrash.setAttribute("id","img-list");
+    $canTrash.setAttribute("class","img-can");
     return $canTrash;
 }
 
 function crearCheckBox(){
     let $checkbox = document.createElement("img");
     $checkbox.src ="/reto03/images/rectangle-box.png";
-    $checkbox.setAttribute("id", "img-list");
+    $checkbox.setAttribute("class", "imgList");
     $checkBoxCreado = $checkbox;
     return $checkbox;
 }
@@ -107,8 +112,17 @@ function prioridadTarea(){
 }
 
 function chequearItem(){
-    $checkBoxCreado.addEventListener("click", function(){
-        $checkbox = document.getElementById("img-list");
-        $checkbox.src ="/reto03/images/checked.png";
-    })
+    $checkBoxCreado = document.getElementsByClassName("imgList");
+    for(let i =0; i < $checkBoxCreado.length; i++){
+        $checkBoxCreado[i].addEventListener("click", function(){
+            this.src ="/reto03/images/checked.png";
+        })
+    }
 }
+
+// function borrarLista(){
+//     $canImg = document.getElementsByClassName("img-can");
+//     $listasCreadas = document.getElementsByClassName("div-nuevo");
+// }
+
+// borrarLista();

@@ -248,6 +248,7 @@ fieldset div label{
     margin-top: 5px;
     border-radius: 8px;
     border: 3px solid #8BC34A;
+    cursor: pointer;
 }
 
 #lista-de-tareas{
@@ -270,7 +271,7 @@ ul li img{
     height: 40px;
 }
 
-#div-nuevo{
+.div-nuevo{
     display: flex;
     align-items: center;
     justify-content:flex-start;
@@ -280,10 +281,10 @@ ul li img{
     padding: 1%;
 }
 
-#icon-list{
+.icon-list{
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #li-js{
@@ -298,7 +299,14 @@ ul li img{
     font-family: 'Montserrat', sans-serif;
 }
 
-#img-list{
+.img-can{
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.imgList{
     width: 36px;
     height: 36px;
     margin-left: 10px;
