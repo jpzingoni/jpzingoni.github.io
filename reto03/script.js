@@ -7,6 +7,7 @@ let $mainsection = document.getElementById("main-section");
 let $mainid = document.getElementById("main-id");
 let $listadetareas = document.getElementById("lista-de-tareas")
 let $item = document.getElementById("item");
+let $botonCancelar = document.getElementById("cancelar")
 let $checkBoxCreado;
 
 $addbutton.addEventListener("click", function(){
@@ -21,6 +22,10 @@ $closepopup.addEventListener("click", function(){
     $popup.removeAttribute("id")
 })
 
+$botonCancelar.addEventListener("click", function(){
+    $mainsection.setAttribute("id", "main-section");
+    $popup.removeAttribute("id")
+})
 $agregartarea.addEventListener("click", function(){
     $mainsection.setAttribute("id", "main-section");
     $tareasagregadas.style.display = "block";
