@@ -33,7 +33,7 @@ $agregartarea.addEventListener("click", function(){
     $mainid.style.display = "none";
     let $divLista = crearDivLista();
     if($divLista === undefined){
-        swal("Falta el nombre de tu tarea!", "No es posible cargar la tarea sin nombre", "error");
+        return swal("Problema al cargar!", "No es posible cargar la tarea sin nombre o descripción", "error");
     }
     $listadetareas.appendChild($divLista);
     chequearItem();
@@ -62,29 +62,40 @@ function crearDivLista(){
 }
 
 function creandoLista(){
+    let inputDescripcion = document.getElementById("description");
+    let inputTituloTarea = document.getElementById("task-name");
     let $descripcionAAgregar = descripciontarea();
     if($descripcionAAgregar == ""){
+        inputDescripcion.value = "";
+        inputTituloTarea.value = "";
         return $descripcionAAgregar;
+    }
+    let $tituloAgregar = tituloTarea();
+    if($tituloAgregar == ""){
+        inputDescripcion.value = "";
+        inputTituloTarea.value = "";
+        return $tituloAgregar;
     }
     let $textoli = document.createTextNode($descripcionAAgregar);
     let $li =document.createElement("li");
     $li.appendChild($textoli);
     $li.setAttribute("id", "li-js");
-    let inputDescripcion = document.getElementById("description");
+    // let inputDescripcion = document.getElementById("description");
     inputDescripcion.value ="";
-    let inputTituloTarea = document.getElementById("task-name");
+    //let inputTituloTarea = document.getElementById("task-name");
     inputTituloTarea.value = "";
     return $li;
 }
 
 function descripciontarea(){
     let descripcion = document.getElementById("description").value
-    // if(descripcion == ""){
-    //     return "no ingresaste ninguna descripción"
-    // }else{
-    //     return descripcion
-    // }
     return descripcion
+}
+
+function tituloTarea(){
+    let $tituloTarea = document.getElementById("task-name").value;
+    console.log($tituloTarea);
+    return $tituloTarea;
 }
 
 function crearIconoTarea(){
