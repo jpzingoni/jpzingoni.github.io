@@ -32,13 +32,21 @@ $agregartarea.addEventListener("click", function(){
     $popup.removeAttribute("id")
     $mainid.style.display = "none";
     let $divLista = crearDivLista();
+    if($divLista === undefined){
+        swal("Falta el nombre de tu tarea!", "No es posible cargar la tarea sin nombre", "error");
+    }
     $listadetareas.appendChild($divLista);
     chequearItem();
+    borrarLista();
 })
 
 function crearDivLista(){
-    let $crearIconoTarea = crearIconoTarea();
     let $crearLista = creandoLista();
+    if($crearLista == ""){
+        return 
+    }
+    let $crearIconoTarea = crearIconoTarea();
+    // let $crearLista = creandoLista();
     let $crearImgAddDel = crearImagenAddDelete();
     let $crearCheckBox = crearCheckBox();
     let $div = document.createElement("div");
@@ -47,6 +55,7 @@ function crearDivLista(){
     $div.appendChild($crearCheckBox);
     $div.appendChild($crearImgAddDel);
     $div.setAttribute("class", "div-nuevo");
+    $div.setAttribute("id","id-nuevo")
     $div.style.borderRightColor = prioridadTarea();
     //chequearItem();
     return $div;
@@ -54,6 +63,9 @@ function crearDivLista(){
 
 function creandoLista(){
     let $descripcionAAgregar = descripciontarea();
+    if($descripcionAAgregar == ""){
+        return $descripcionAAgregar;
+    }
     let $textoli = document.createTextNode($descripcionAAgregar);
     let $li =document.createElement("li");
     $li.appendChild($textoli);
@@ -67,11 +79,12 @@ function creandoLista(){
 
 function descripciontarea(){
     let descripcion = document.getElementById("description").value
-    if(descripcion == ""){
-        return "no ingresaste ninguna descripción"
-    }else{
-        return descripcion
-    }
+    // if(descripcion == ""){
+    //     return "no ingresaste ninguna descripción"
+    // }else{
+    //     return descripcion
+    // }
+    return descripcion
 }
 
 function crearIconoTarea(){
@@ -95,13 +108,14 @@ function crearImagenAddDelete(){
     let $canTrash = document.createElement("img");
     $canTrash.src = "/reto03/images/trash-can.png";
     $canTrash.setAttribute("class","img-can");
+    $canTrash.setAttribute("id","id-can");
     return $canTrash;
 }
 
 function crearCheckBox(){
     let $checkbox = document.createElement("img");
     $checkbox.src ="/reto03/images/rectangle-box.png";
-    $checkbox.setAttribute("class", "imgList");
+    $checkbox.setAttribute("class", "imgCheckBox");
     $checkBoxCreado = $checkbox;
     return $checkbox;
 }
@@ -117,7 +131,7 @@ function prioridadTarea(){
 }
 
 function chequearItem(){
-    $checkBoxCreado = document.getElementsByClassName("imgList");
+    $checkBoxCreado = document.getElementsByClassName("imgCheckBox");
     for(let i =0; i < $checkBoxCreado.length; i++){
         $checkBoxCreado[i].addEventListener("click", function(){
             this.src ="/reto03/images/checked.png";
@@ -125,9 +139,14 @@ function chequearItem(){
     }
 }
 
-// function borrarLista(){
-//     $canImg = document.getElementsByClassName("img-can");
-//     $listasCreadas = document.getElementsByClassName("div-nuevo");
-// }
-
-// borrarLista();
+function borrarLista(){
+    $canImg = document.querySelectorAll(".img-can");
+    console.log($canImg);
+    $listasCreadas = document.getElementById("div-nuevo");
+    $canImg.forEach(function(imagen){
+        imagen.addEventListener("click", function(){
+            let div = this.parentNode;
+            div.remove();
+        })
+    });
+}

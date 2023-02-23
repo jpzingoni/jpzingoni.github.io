@@ -306,9 +306,9 @@ ul li img{
     cursor: pointer;
 }
 
-.imgList{
-    width: 36px;
-    height: 36px;
+.imgCheckBox{
+    width: 24px;
+    height: 24px;
     margin-left: 10px;
     cursor: pointer;
 }
