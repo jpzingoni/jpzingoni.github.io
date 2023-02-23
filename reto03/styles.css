@@ -176,7 +176,8 @@ footer img{
 #task-type{
     width: 67%;
     height: 30px;
-    background-color: #303F9F;
+    color: black;
+    /* background-color: #303F9F; */
     border: 3px solid #8BC34A;
     font-family: 'Montserrat', sans-serif;
     outline: none;
@@ -184,9 +185,10 @@ footer img{
 
 textarea{
     resize: none;
-    background-color: #303F9F;
+    /* background-color: #303F9F; */
     border: 3px solid #8BC34A;
     outline: none;
+    color: black;
     font-family: 'Montserrat', sans-serif;  
 }
 

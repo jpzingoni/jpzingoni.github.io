@@ -25,6 +25,10 @@ $closepopup.addEventListener("click", function(){
 $botonCancelar.addEventListener("click", function(){
     $mainsection.setAttribute("id", "main-section");
     $popup.removeAttribute("id")
+    let inputDescripcion = document.getElementById("description");
+    let inputTituloTarea = document.getElementById("task-name");
+    inputDescripcion.value = "";
+    inputTituloTarea.value = "";
 })
 $agregartarea.addEventListener("click", function(){
     $mainsection.setAttribute("id", "main-section");
@@ -94,7 +98,6 @@ function descripciontarea(){
 
 function tituloTarea(){
     let $tituloTarea = document.getElementById("task-name").value;
-    console.log($tituloTarea);
     return $tituloTarea;
 }
 
