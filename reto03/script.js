@@ -11,7 +11,6 @@ let $botonCancelar = document.getElementById("cancelar")
 let $checkBoxCreado;
 
 $addbutton.addEventListener("click", function(){
-    console.log("Click")
     $popup.setAttribute("id","pop-up-display")
     $mainsection.removeAttribute("id")
     //$mainsection.style.display = "none";
@@ -31,17 +30,21 @@ $botonCancelar.addEventListener("click", function(){
     inputTituloTarea.value = "";
 })
 $agregartarea.addEventListener("click", function(){
-    $mainsection.setAttribute("id", "main-section");
-    $tareasagregadas.style.display = "block";
-    $popup.removeAttribute("id")
-    $mainid.style.display = "none";
     let $divLista = crearDivLista();
+    $mainsection.setAttribute("id", "main-section");
     if($divLista === undefined){
+        $popup.removeAttribute("id")
         return swal("Problema al cargar!", "No es posible cargar la tarea sin nombre o descripción", "error");
+    }else{
+        $mainsection.setAttribute("id", "main-section");
+        $tareasagregadas.style.display = "block";
+        $popup.removeAttribute("id")
+        $mainid.style.display = "none";
+        //let $divLista = crearDivLista();
+        $listadetareas.appendChild($divLista);
+        chequearItem();
+        borrarLista();
     }
-    $listadetareas.appendChild($divLista);
-    chequearItem();
-    borrarLista();
 })
 
 function crearDivLista(){
@@ -80,9 +83,9 @@ function creandoLista(){
         inputTituloTarea.value = "";
         return $tituloAgregar;
     }
-    let $textoli = document.createTextNode($descripcionAAgregar);
+    let $tituloli = document.createTextNode(`${$tituloAgregar}: ${$descripcionAAgregar}`);
     let $li =document.createElement("li");
-    $li.appendChild($textoli);
+    $li.appendChild($tituloli);
     $li.setAttribute("id", "li-js");
     // let inputDescripcion = document.getElementById("description");
     inputDescripcion.value ="";
@@ -155,7 +158,6 @@ function chequearItem(){
 
 function borrarLista(){
     $canImg = document.querySelectorAll(".img-can");
-    console.log($canImg);
     $listasCreadas = document.getElementById("div-nuevo");
     $canImg.forEach(function(imagen){
         imagen.addEventListener("click", function(){

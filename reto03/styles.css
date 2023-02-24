@@ -183,6 +183,10 @@ footer img{
     outline: none;
 }
 
+.task-type-eleccion{
+    color: black;
+}
+
 textarea{
     resize: none;
     /* background-color: #303F9F; */
@@ -284,8 +288,8 @@ ul li img{
 }
 
 .icon-list{
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     margin-left: 10px;
 }
 
@@ -299,11 +303,12 @@ ul li img{
     flex: 1;;
     margin-left: 15px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 
 .img-can{
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     margin-left: 10px;
     cursor: pointer;
 }
