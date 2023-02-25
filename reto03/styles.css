@@ -284,7 +284,7 @@ ul li img{
     border: 3px solid #BDBDBD;
     border-radius: 10px;
     margin-bottom: 2%;
-    padding: 1%;
+    padding: 2%;
 }
 
 .icon-list{
@@ -298,6 +298,9 @@ ul li img{
     list-style: none;
     width: 70%;
     white-space: normal;
+    hyphens: auto;
+    hyphenate-character: "\2010";
+    word-break: break-all;
     word-wrap: break-word;
     text-align: left;
     flex: 1;;

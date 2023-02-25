@@ -10,6 +10,24 @@ let $item = document.getElementById("item");
 let $botonCancelar = document.getElementById("cancelar")
 let $checkBoxCreado;
 
+function corrobarTareas(){
+    //let $listasExistentes = $listadetareas.getElementsByTagName("li").length;
+    if(localStorage.getItem("$pruebaLocalStorage") == null || localStorage.getItem("$pruebaLocalStorage") == ""){
+        return;
+    }else{
+        $tareasagregadas.style.display = "block";
+        $mainid.style.display = "none";
+        $rango = document.createRange();
+        $tareasAgregadasEnLocalStorage = localStorage.getItem("$pruebaLocalStorage");
+        console.log($tareasAgregadasEnLocalStorage);
+        $tareasagregadasNodo = $rango.createContextualFragment($tareasAgregadasEnLocalStorage);
+        $listadetareas.appendChild($tareasagregadasNodo);
+        chequearItem();
+        borrarLista();
+    }
+    
+}
+corrobarTareas()
 $addbutton.addEventListener("click", function(){
     $popup.setAttribute("id","pop-up-display")
     $mainsection.removeAttribute("id")
@@ -42,6 +60,27 @@ $agregartarea.addEventListener("click", function(){
         $mainid.style.display = "none";
         //let $divLista = crearDivLista();
         $listadetareas.appendChild($divLista);
+         ////
+        ////
+        ////
+        $tareasAgregadasTexto = $listadetareas.innerHTML.trim();
+        console.log($tareasAgregadasTexto)
+
+        localStorage.setItem("$pruebaLocalStorage", $tareasAgregadasTexto);
+
+        //vamos a probar crear una variable con todo eso, para convertirla en nodo y luego poder agregarla al html
+
+        // $rango = document.createRange();
+        // $tareasAgregadasEnLocalStorage = localStorage.getItem("$pruebaLocalStorage");
+        // console.log($tareasAgregadasEnLocalStorage);
+        // $tareasagregadasNodo = $rango.createContextualFragment($tareasAgregadasTexto);
+        // LOCALSTORAGE = $tareasagregadasNodo;
+        //$tareasagregadas.appendChild($tareasagregadasNodo);
+        
+
+        ////
+        ////
+        ////
         chequearItem();
         borrarLista();
     }
@@ -109,13 +148,13 @@ function crearIconoTarea(){
     let valueTask = taskType.value;
     let $icon = document.createElement("img");
     if(valueTask == "work"){
-        $icon.src = "/reto03/images/work.png";
+        $icon.src = "/images/work.png";
     }else if(valueTask == "personal"){
-        $icon.src = "/reto03/images/personal.png";
+        $icon.src = "/images/personal.png";
     }else if(valueTask == "domestic"){
-        $icon.src = "/reto03/images/domestic.png";
+        $icon.src = "/images/domestic.png";
     }else{
-        $icon.src = "/reto03/images/fun.png";
+        $icon.src = "/images/fun.png";
     }
     $icon.setAttribute("class","icon-list")
     return $icon;
@@ -123,7 +162,7 @@ function crearIconoTarea(){
 
 function crearImagenAddDelete(){
     let $canTrash = document.createElement("img");
-    $canTrash.src = "/reto03/images/trash-can.png";
+    $canTrash.src = "/images/trash-can.png";
     $canTrash.setAttribute("class","img-can");
     $canTrash.setAttribute("id","id-can");
     return $canTrash;
@@ -131,7 +170,7 @@ function crearImagenAddDelete(){
 
 function crearCheckBox(){
     let $checkbox = document.createElement("img");
-    $checkbox.src ="/reto03/images/rectangle-box.png";
+    $checkbox.src ="/images/rectangle-box.png";
     $checkbox.setAttribute("class", "imgCheckBox");
     $checkBoxCreado = $checkbox;
     return $checkbox;
@@ -151,7 +190,7 @@ function chequearItem(){
     $checkBoxCreado = document.getElementsByClassName("imgCheckBox");
     for(let i =0; i < $checkBoxCreado.length; i++){
         $checkBoxCreado[i].addEventListener("click", function(){
-            this.src ="/reto03/images/checked.png";
+            this.src ="/images/checked.png";
         })
     }
 }
@@ -163,6 +202,13 @@ function borrarLista(){
         imagen.addEventListener("click", function(){
             let div = this.parentNode;
             div.remove();
+            localStorage.setItem("$pruebaLocalStorage", $listadetareas.innerHTML.trim());
+            if(localStorage.getItem("$pruebaLocalStorage") == "" || localStorage.getItem("$pruebaLocalStorage") == null){
+                $tareasagregadas.style.display = "none";
+                $mainid.style.display = "flex";
+            }
+            console.log(localStorage.getItem("$pruebaLocalStorage"));
         })
     });
 }
+
