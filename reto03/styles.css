@@ -15,6 +15,30 @@ body{
     justify-content: center;
 }
 
+#pop-up-error{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 3;
+    background-color: rgba(230, 232, 234, 0.5);
+}
+
+#mensaje-error{
+    background-color: #F6E7E5;
+    opacity: 1;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #A1BAA2
+}
 .container{
     width: 90%;
     height: 90%;
@@ -147,6 +171,12 @@ footer img{
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+#close-error{
+width: 64px;
+height: 64px;
+cursor: pointer;
 }
 
 #form{

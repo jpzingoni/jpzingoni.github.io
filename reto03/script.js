@@ -8,6 +8,8 @@ let $mainid = document.getElementById("main-id");
 let $listadetareas = document.getElementById("lista-de-tareas")
 let $item = document.getElementById("item");
 let $botonCancelar = document.getElementById("cancelar")
+let $popupError = document.getElementById("pop-up-error");
+let $closeError = document.getElementById("close-error");
 let $checkBoxCreado;
 
 function corrobarTareas(){
@@ -40,6 +42,10 @@ $closepopup.addEventListener("click", function(){
     $popup.removeAttribute("id")
 })
 
+$closeError.addEventListener("click", function(){
+    $popupError.style.display = "none";
+})
+
 $botonCancelar.addEventListener("click", function(){
     $mainsection.setAttribute("id", "main-section");
     $popup.removeAttribute("id")
@@ -53,7 +59,8 @@ $agregartarea.addEventListener("click", function(){
     $mainsection.setAttribute("id", "main-section");
     if($divLista === undefined){
         $popup.removeAttribute("id")
-        return swal("Problema al cargar!", "No es posible cargar la tarea sin nombre o descripción", "error");
+        $popupError.style.display = "flex";
+        //return swal("Problema al cargar!", "No es posible cargar la tarea sin nombre o descripción", "error");
     }else{
         $mainsection.setAttribute("id", "main-section");
         $tareasagregadas.style.display = "block";
