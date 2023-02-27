@@ -39,6 +39,10 @@ body{
     align-items: center;
     border: 3px solid #A1BAA2
 }
+
+#mensaje-error p{
+    text-align: center;
+}
 .container{
     width: 90%;
     height: 90%;
