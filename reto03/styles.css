@@ -30,7 +30,7 @@ body{
 #mensaje-error{
     background-color: #F6E7E5;
     opacity: 1;
-    width: 50%;
+    width: 90%;
     height: 50%;
     border-radius: 10px;
     display: flex;
