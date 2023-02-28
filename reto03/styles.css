@@ -30,7 +30,7 @@ body{
 #mensaje-error{
     background-color: #F6E7E5;
     opacity: 1;
-    width: 90%;
+    width: 80%;
     height: 50%;
     border-radius: 10px;
     display: flex;
@@ -40,7 +40,7 @@ body{
     border: 3px solid #A1BAA2
 }
 
-#mensaje-error p{
+#mensaje-error p, h1{
     text-align: center;
 }
 .container{
@@ -342,7 +342,6 @@ ul li img{
     white-space: normal;
     hyphens: auto;
     hyphenate-character: "\2010";
-    word-break: break-all;
     word-wrap: break-word;
     text-align: left;
     flex: 1;;
