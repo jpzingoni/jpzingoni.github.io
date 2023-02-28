@@ -199,6 +199,10 @@ function chequearItem(){
     for(let i =0; i < $checkBoxCreado.length; i++){
         $checkBoxCreado[i].addEventListener("click", function(){
             this.src ="/reto03/images/checked.png";
+            $tareasAgregadasTexto = $listadetareas.innerHTML.trim();
+            console.log($tareasAgregadasTexto)
+    
+            localStorage.setItem("$pruebaLocalStorage", $tareasAgregadasTexto);
         })
     }
 }
