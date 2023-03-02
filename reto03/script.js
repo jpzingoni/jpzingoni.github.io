@@ -60,7 +60,6 @@ $agregartarea.addEventListener("click", function(){
     if($divLista === undefined){
         $popup.removeAttribute("id")
         $popupError.style.display = "flex";
-        //return swal("Problema al cargar!", "No es posible cargar la tarea sin nombre o descripción", "error");
     }else{
         $mainsection.setAttribute("id", "main-section");
         $tareasagregadas.style.display = "block";
@@ -68,7 +67,7 @@ $agregartarea.addEventListener("click", function(){
         $mainid.style.display = "none";
         //let $divLista = crearDivLista();
         $listadetareas.appendChild($divLista);
-         ////
+        ////
         ////
         ////
         $tareasAgregadasTexto = $listadetareas.innerHTML.trim();
@@ -109,7 +108,6 @@ function crearDivLista(){
     $div.appendChild($crearCheckBox);
     $div.appendChild($crearImgAddDel);
     $div.setAttribute("class", "div-nuevo");
-    $div.setAttribute("id","id-nuevo")
     $div.style.borderRightColor = prioridadTarea();
     //chequearItem();
     return $div;
@@ -209,7 +207,6 @@ function chequearItem(){
 
 function borrarLista(){
     $canImg = document.querySelectorAll(".img-can");
-    $listasCreadas = document.getElementById("div-nuevo");
     $canImg.forEach(function(imagen){
         imagen.addEventListener("click", function(){
             let div = this.parentNode;
