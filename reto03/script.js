@@ -10,31 +10,44 @@ let $item = document.getElementById("item");
 let $botonCancelar = document.getElementById("cancelar")
 let $popupError = document.getElementById("pop-up-error");
 let $closeError = document.getElementById("close-error");
+let $mainImagen = document.getElementById("main-image");
+let $mainTitle = document.getElementById("main-title");
+let $verPendientes = document.getElementById("btn-pendientes");
 let $checkBoxCreado;
+let arrayLocalStorage = [];
 
 function corrobarTareas(){
-    //let $listasExistentes = $listadetareas.getElementsByTagName("li").length;
-    if(localStorage.getItem("$pruebaLocalStorage") == null || localStorage.getItem("$pruebaLocalStorage") == ""){
+    arrayTexto = localStorage.getItem('arrayTareas');
+    arrayLocalStorage = JSON.parse(arrayTexto);
+    if(arrayLocalStorage == null || localStorage.getItem("$pruebaLocalStorage") == ""){
+        arrayLocalStorage = [];
         localStorage.clear();
         return;
-    }else{
-        $tareasagregadas.style.display = "block";
-        $mainid.style.display = "none";
-        $rango = document.createRange();
-        $tareasAgregadasEnLocalStorage = localStorage.getItem("$pruebaLocalStorage");
-        console.log($tareasAgregadasEnLocalStorage);
-        $tareasagregadasNodo = $rango.createContextualFragment($tareasAgregadasEnLocalStorage);
-        $listadetareas.appendChild($tareasagregadasNodo);
-        chequearItem();
-        borrarLista();
     }
-    
+    else if(arrayLocalStorage.length < 2){
+        $mainImagen.src = "/reto03/images/grinning.png";
+        $mainTitle.innerText = `Hola! Recorda que tenés ${arrayLocalStorage.length} tarea pendiente`
+        $verPendientes.style.display = "block";
+        $addbutton.style.display = "none";
+    }
+    else if(arrayLocalStorage.length < 4){
+        $mainImagen.src = "/reto03/images/upsidedown.png";
+        $mainTitle.innerText = `Hola! Recorda que tenés ${arrayLocalStorage.length} tarea pendiente`
+        $verPendientes.style.display = "block";
+        $addbutton.style.display = "none";
+    }
+    else if(arrayLocalStorage.length >= 4){
+        $mainImagen.src = "/reto03/images/worried-face.png";
+        $mainTitle.innerText = `Hola! Recorda que tenés ${arrayLocalStorage.length} tarea pendiente`
+        $verPendientes.style.display = "block";
+        $addbutton.style.display = "none";
+    }
 }
 corrobarTareas()
 $addbutton.addEventListener("click", function(){
-    $popup.setAttribute("id","pop-up-display")
-    $mainsection.removeAttribute("id")
-    //$mainsection.style.display = "none";
+$popup.setAttribute("id","pop-up-display")
+$mainsection.removeAttribute("id")
+//$mainsection.style.display = "none";
 })
 
 $closepopup.addEventListener("click", function(){
@@ -60,7 +73,8 @@ $agregartarea.addEventListener("click", function(){
     if($divLista === undefined){
         $popup.removeAttribute("id")
         $popupError.style.display = "flex";
-    }else{
+    }
+    else{
         $mainsection.setAttribute("id", "main-section");
         $tareasagregadas.style.display = "block";
         $popup.removeAttribute("id")
@@ -74,6 +88,10 @@ $agregartarea.addEventListener("click", function(){
         console.log($tareasAgregadasTexto)
 
         localStorage.setItem("$pruebaLocalStorage", $tareasAgregadasTexto);
+
+        arrayLocalStorage.push($tareasAgregadasTexto);
+        arrayLocalStorageTexto = JSON.stringify(arrayLocalStorage);
+        localStorage.setItem("arrayTareas", arrayLocalStorageTexto);
 
         //vamos a probar crear una variable con todo eso, para convertirla en nodo y luego poder agregarla al html
 
@@ -91,6 +109,11 @@ $agregartarea.addEventListener("click", function(){
         chequearItem();
         borrarLista();
     }
+})
+
+$verPendientes.addEventListener("click", ()=>{
+    $addbutton.style.display = "block"
+    return tareasPendientes();
 })
 
 function crearDivLista(){
@@ -209,15 +232,32 @@ function borrarLista(){
     $canImg = document.querySelectorAll(".img-can");
     $canImg.forEach(function(imagen){
         imagen.addEventListener("click", function(){
+            arrayLocalStorage.pop();
+            arrayLocalStorageTexto = JSON.stringify(arrayLocalStorage);
+            localStorage.setItem("arrayTareas", arrayLocalStorageTexto);
             let div = this.parentNode;
             div.remove();
             localStorage.setItem("$pruebaLocalStorage", $listadetareas.innerHTML.trim());
             if(localStorage.getItem("$pruebaLocalStorage") == "" || localStorage.getItem("$pruebaLocalStorage") == null){
                 $tareasagregadas.style.display = "none";
                 $mainid.style.display = "flex";
+                $mainImagen.src = "/reto03/images/party-face.png";
+                $mainTitle.innerText = "No hay tareas pendientes"
+                $verPendientes.style.display = "none";
             }
             console.log(localStorage.getItem("$pruebaLocalStorage"));
         })
     });
 }
 
+function tareasPendientes(){
+    $tareasagregadas.style.display = "block";
+    $mainid.style.display = "none";
+    $rango = document.createRange();
+    $tareasAgregadasEnLocalStorage = localStorage.getItem("$pruebaLocalStorage");
+    console.log($tareasAgregadasEnLocalStorage);
+    $tareasagregadasNodo = $rango.createContextualFragment($tareasAgregadasEnLocalStorage);
+    $listadetareas.appendChild($tareasagregadasNodo);
+    chequearItem();
+    borrarLista();
+}
