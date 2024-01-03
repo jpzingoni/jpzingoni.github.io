@@ -28,8 +28,9 @@ nav ul li{
 nav ul li a{
     padding: 10px;
     color: black;
-    text-transform: uppercase;
-    text-decoration: underline;
+    text-transform: uppercase !important;
+    text-decoration: underline !important;
+    cursor: pointer;
     
 }
 
