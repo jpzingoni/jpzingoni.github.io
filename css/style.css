@@ -34,6 +34,10 @@ nav ul li a{
     
 }
 
+.agro {
+    display: block;
+    margin: 0 auto;
+}
 /* .splash{
     background: url(../images/moon-background.jpg) center center fixed;
     width: 100%;
