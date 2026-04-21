@@ -14,7 +14,7 @@ body {
 /* ─── HEADER ─── */
 header {
     height: 64px;
-    background-color: #059669 !important;
+    background-color: #9ca3af !important;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -297,7 +297,7 @@ nav ul li a:hover {
 
 /* ─── FOOTER ─── */
 footer {
-    background: #059669;
+    background: #9ca3af;
     color: #ffffff;
     padding: 32px 0;
     text-align: center;
