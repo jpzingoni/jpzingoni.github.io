@@ -36,7 +36,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css?v=7">
+    <link rel="stylesheet" href="/css/style.css?v=8">
 </head>
 <body>
 
@@ -57,15 +57,17 @@
     <!-- Hero / Profile -->
     <section class="hero-section">
         <div class="container">
-            <div id="profile-pic-container">
-                <img src="images/profilepic.png" id="profile-pic" alt="Juan Pedro Zingoni">
-            </div>
-            <h1 class="hero-name">Juan Pedro Zingoni</h1>
-            <p class="hero-title">Data Analyst | BI Developer</p>
-            <div class="row justify-content-center">
-                <div class="col-md-8 hero-bio">
-                    <p>I am an economist graduated from the Universidad Nacional del Sur, Bahía Blanca, Buenos Aires. I enjoy working with statistics, data visualization, and technology. I have built my career around data, gaining expertise in Python, SQL, Power BI, ETL processes, and web development.</p>
-                    <p>Since 2023, I have been working independently as a data consultant, serving clients across various industries. My work involves database connections, process automation, KPI creation, P&amp;L analysis, and dashboard development. I have worked with ERP systems such as Tango, Odoo, and Finnegans, which has given me broad experience in data handling across different business environments.</p>
+            <div class="hero-layout">
+                <div class="hero-photo">
+                    <img src="images/profilepic.png" id="profile-pic" alt="Juan Pedro Zingoni">
+                </div>
+                <div class="hero-content">
+                    <p class="hero-title">Data Analyst | BI Developer</p>
+                    <h1 class="hero-name">Juan Pedro Zingoni</h1>
+                    <div class="hero-bio">
+                        <p>I am an economist graduated from the Universidad Nacional del Sur, Bahía Blanca, Buenos Aires. I enjoy working with statistics, data visualization, and technology. I have built my career around data, gaining expertise in Python, SQL, Power BI, ETL processes, and web development.</p>
+                        <p>Since 2023, I have been working independently as a data consultant, serving clients across various industries. My work involves database connections, process automation, KPI creation, P&amp;L analysis, and dashboard development. I have worked with ERP systems such as Tango, Odoo, and Finnegans, which has given me broad experience in data handling across different business environments.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,129 +115,119 @@
     </section>
 
     <!-- Featured Project -->
-    <section class="featured-section">
+    <section class="featured-section" id="tableros">
         <div class="container">
-            <div class="row espacios">
-                <div class="col">
-                    <div class="card">
-                        <h3 id="titulo-tablero">Financial Ticker Evolution</h3>
-                        <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active text-center">
-                                    <img src="/images/tickerFinancieros_01.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Análisis por Ticker">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="/images/tickerFinancieros_02.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Variación Histórica">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="/images/tickerFinancieros_03.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Ranking Mensual">
-                                </div>
-                                <div class="carousel-item text-center">
-                                    <img src="/images/tickerFinancieros_04.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Tickers a Disposición">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+            <div class="section-label">
+                <span class="section-num">01</span>
+                <span class="section-title-label">Featured Project</span>
+            </div>
+            <div class="project-card grad-ticker">
+                <h3>Financial Ticker Evolution</h3>
+                <div id="carouselExample" class="carousel slide mb-4">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <img src="/images/tickerFinancieros_01.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Ticker Analysis">
                         </div>
-                        <div class="content">
-                            <p>The Financial Ticker Performance dashboard was originally developed as a freelance project for a client. I then decided to scale it to incorporate additional indicators and tickers. Started in January 2026, the project is still under active development.</p>
-                            <p>It covers multiple tickers with historical value analysis. Data is retrieved using the Yahoo Finance Python library, then cleaned through an ETL process with Pandas, and finally visualized in Power BI. The dashboard includes price data, volume, and financial metrics to estimate a P&amp;L.</p>
-                            <hr>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiMjkxMGRhYTgtOGNjNi00NWU2LTgwOTEtMGY2M2JlNGMyMTY1IiwidCI6IjMyZjlmODNkLTA2ODMtNDVkMC1hZDE3LTdjMGI5MTNhZmNiOCJ9" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
+                        <div class="carousel-item text-center">
+                            <img src="/images/tickerFinancieros_02.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Historical Variation">
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="/images/tickerFinancieros_03.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Monthly Ranking">
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="/images/tickerFinancieros_04.jpg" class="pico img-fluid mx-auto" alt="Financial Ticker Dashboard - Available Tickers">
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+                <p>The Financial Ticker Performance dashboard was originally developed as a freelance project for a client. I then decided to scale it to incorporate additional indicators and tickers. Started in January 2026, the project is still under active development.</p>
+                <p>It covers multiple tickers with historical value analysis. Data is retrieved using the Yahoo Finance Python library, then cleaned through an ETL process with Pandas, and finally visualized in Power BI. The dashboard includes price data, volume, and financial metrics to estimate a P&amp;L.</p>
+                <hr>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjkxMGRhYTgtOGNjNi00NWU2LTgwOTEtMGY2M2JlNGMyMTY1IiwidCI6IjMyZjlmODNkLTA2ODMtNDVkMC1hZDE3LTdjMGI5MTNhZmNiOCJ9" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
             </div>
         </div>
     </section>
 
     <!-- Other Projects -->
     <section id="trabajos-realizados">
-        <div class="container espacios" id="tableros">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8 centrado">
-                    <h2>Other Projects</h2>
-                    <br>
-                    <p>A selection of client work, dashboards, and analysis projects built with Python, ETL pipelines, Power BI, and web development — covering fashion startups, agricultural data, pricing, business analytics, and census data.</p>
-                </div>
+        <div class="container">
+            <div class="section-label" style="padding-top: 20px;">
+                <span class="section-num">02</span>
+                <span class="section-title-label">Other Projects</span>
             </div>
+            <p class="section-intro">A selection of client work, dashboards, and analysis projects built with Python, ETL pipelines, Power BI, and web development — covering fashion startups, agricultural data, pricing, business analytics, and census data.</p>
 
             <!-- ROPA* -->
-            <div class="row espacios frases justify-content-center centrado">
-                <div class="col-md-8 text-center centrado">
-                    <div id="carouselRopa" class="carousel slide mb-3" data-bs-ride="false">
-                        <div class="carousel-inner" style="border-radius:10px; overflow:hidden; border:1px solid #e2e8f0;">
-                            <div class="carousel-item active">
-                                <img src="/images/ropa_01.jpg" class="d-block w-100" alt="ROPA* — Sitio Web">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/images/ropa_02.jpg" class="d-block w-100" alt="ROPA* — Admin Dashboard">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/images/ropa_03.jpg" class="d-block w-100" alt="ROPA* — Resumen Mensual P&L">
-                            </div>
+            <div class="project-card grad-ropa">
+                <div id="carouselRopa" class="carousel slide mb-4" data-bs-ride="false">
+                    <div class="carousel-inner" style="border-radius:10px; overflow:hidden;">
+                        <div class="carousel-item active">
+                            <img src="/images/ropa_01.jpg" class="d-block w-100" alt="ROPA* — Website">
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRopa" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRopa" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="carousel-item">
+                            <img src="/images/ropa_02.jpg" class="d-block w-100" alt="ROPA* — Admin Dashboard">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/ropa_03.jpg" class="d-block w-100" alt="ROPA* — Monthly P&L">
+                        </div>
                     </div>
-                    <h2>ROPA* — Web &amp; Management System</h2>
-                    <p>Working closely with the ROPA* team, we held discovery sessions to understand the needs of this Argentine fashion startup. We designed and built the website and developed a custom internal management system — covering sales, purchases, and suppliers. The work also included a KPI dashboard to track key business metrics and a monthly P&amp;L statement to give the founders a clear view of their results.</p>
-                    <hr>
-                    <a href="https://ropaproduccionarg.com.ar/" target="_blank" class="btn btn-primary">VISIT THE SITE</a>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRopa" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRopa" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+                <h2>ROPA* — Web &amp; Management System</h2>
+                <p>Working closely with the ROPA* team, we held discovery sessions to understand the needs of this Argentine fashion startup. We designed and built the website and developed a custom internal management system — covering sales, purchases, and suppliers. The work also included a KPI dashboard to track key business metrics and a monthly P&amp;L statement to give the founders a clear view of their results.</p>
+                <hr>
+                <a href="https://ropaproduccionarg.com.ar/" target="_blank" class="btn btn-primary">VISIT THE SITE</a>
             </div>
 
-            <!-- Agricultural estimates -->
-            <div class="row espacios frases justify-content-center centrado">
-                <div class="col-md-8 text-center centrado">
-                    <img src="/images/estimacionesAgricolas_01.jpg" class="upso" alt="Agricultural Estimates Dashboard">
-                    <h2>Agricultural Estimates</h2>
-                    <p>Built for <a href="https://infodash.org" target="_blank"><b>Infodash</b></a>, a collaborative project focused on processing statistical data and building dashboards for open analysis. Contains Argentina's agricultural campaign data since 1969, combining two databases — one with crop production data and one with geolocation coordinates — processed via an ETL pipeline in Python and visualized in Power BI.</p>
-                    <hr>
-                    <a href="https://github.com/jpzingoni/ETL-para-datos-de-agricultura" class="btn btn-primary" target="_blank">CODE ON GITHUB</a>
-                    <a href="https://infodash.org/tableros/sector-agropecuario/" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
-                </div>
+            <!-- Agricultural Estimates -->
+            <div class="project-card grad-agro">
+                <img src="/images/estimacionesAgricolas_01.jpg" class="upso" alt="Agricultural Estimates Dashboard">
+                <h2>Agricultural Estimates</h2>
+                <p>Built for <a href="https://infodash.org" target="_blank"><b>Infodash</b></a>, a collaborative project focused on processing statistical data and building dashboards for open analysis. Contains Argentina's agricultural campaign data since 1969, combining two databases — one with crop production data and one with geolocation coordinates — processed via an ETL pipeline in Python and visualized in Power BI.</p>
+                <hr>
+                <a href="https://github.com/jpzingoni/ETL-para-datos-de-agricultura" class="btn btn-primary" target="_blank">CODE ON GITHUB</a>
+                <a href="https://infodash.org/tableros/sector-agropecuario/" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
             </div>
 
-            <!-- Basic basket & ContabilidApp -->
-            <div class="row espacios frases centrado align-items-center align-items-md-start">
-                <div class="col-md-6 mb-4">
+            <!-- Basic Basket & ContabilidApp -->
+            <div class="project-card-pair">
+                <div class="project-card-small grad-basket">
                     <img src="/images/canasta_basica.jpg" class="upso" alt="Basic Basket Price Dashboard">
                     <h2>Evolution of Prices – Basic Basket</h2>
                     <p>A personal project to track the price evolution of a selected basket of products. Data collected via web scraping, cleaned with Pandas in Python, and visualized in Power BI.</p>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiZjkyMjk2ZGYtYWIwOS00ZmZmLTkyNmQtZGRhNWE1NGI5NDMwIiwidCI6IjMyZjlmODNkLTA2ODMtNDVkMC1hZDE3LTdjMGI5MTNhZmNiOCJ9" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="project-card-small grad-contab">
                     <img src="/images/contabilidad_app.jpg" class="upso" alt="ContabilidApp Report">
                     <h2>Report for ContabilidApp</h2>
                     <p>Dashboard developed for a cloud accounting company (name changed for privacy). The goal was to analyze user behavior and feature usage within the application, using a data cleaning process to standardize records before building Power BI visualizations.</p>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiYTVjNGJkY2YtODNkOC00YTYzLTlkNzQtYzkzMWViYTMzZDdiIiwidCI6IjMyZjlmODNkLTA2ODMtNDVkMC1hZDE3LTdjMGI5MTNhZmNiOCJ9" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
                 </div>
             </div>
-        </div>
 
-        <div class="container">
-            <div class="row espacios frases centrado align-items-center align-items-md-start">
-                <div class="col-md-6 mb-4">
+            <!-- Sleep Well & Censo -->
+            <div class="project-card-pair">
+                <div class="project-card-small grad-sleep">
                     <img src="/images/informe_sleep_well.jpg" class="upso" alt="Sleep Well Report">
                     <h2>Sleep Well Report</h2>
                     <p>Dashboard for a tourism company managing vacation and temporary rentals (name changed for privacy). Built to analyze specific KPIs and accommodation performance metrics using Power BI.</p>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiZGMwNzQ4MTctYzhlOC00ZGQ4LWFmNDAtM2RiMjNlYTY0ZGZmIiwidCI6IjMyZjlmODNkLTA2ODMtNDVkMC1hZDE3LTdjMGI5MTNhZmNiOCJ9" target="_blank" class="btn btn-primary">GO TO THE DASHBOARD</a>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="project-card-small grad-censo">
                     <img src="/images/informe_censo.jpg" class="upso" alt="Southwest Population Report">
                     <h2>Southwest Population Report</h2>
                     <p>Uses data from Argentina's 2022 Census (INDEC). An ETL process was applied to filter and extract population evolution data for the southwestern region of Buenos Aires province, then visualized in Power BI.</p>
