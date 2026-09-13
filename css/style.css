@@ -93,11 +93,10 @@ nav ul li a:hover { color: var(--navy) !important; }
 
 #profile-pic {
     display: block;
-    width: 280px;
-    height: 340px;
+    width: 260px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(15, 27, 76, 0.10);
+    border-radius: 50%;
 }
 
 .hero-content { flex: 1; }
@@ -427,8 +426,8 @@ footer a:hover { text-decoration: underline; }
     }
 
     #profile-pic {
-        width: 200px;
-        height: 240px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero-name { font-size: 2.25rem; }
