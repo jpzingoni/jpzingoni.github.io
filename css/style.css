@@ -121,7 +121,6 @@ nav ul li a:hover { color: var(--navy) !important; }
 }
 
 .hero-bio {
-    max-width: 540px;
     color: var(--text);
     font-size: var(--text-body);
     line-height: 1.75;
