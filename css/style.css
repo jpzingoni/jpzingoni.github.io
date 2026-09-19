@@ -137,6 +137,14 @@ nav ul li a:hover { color: var(--navy) !important; }
     margin: 0;
 }
 
+.hero-tagline a {
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-tagline a:hover { text-decoration: underline; }
+
 /* Row 2: interactive data widget */
 .hero-bottom {
     border-top: 1px solid var(--border);
