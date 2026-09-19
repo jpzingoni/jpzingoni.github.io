@@ -36,7 +36,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css?v=9">
+    <link rel="stylesheet" href="/css/style.css?v=10">
 </head>
 <body>
 
@@ -64,12 +64,64 @@
                 <div class="hero-content">
                     <p class="hero-title">Data Analyst | BI Developer</p>
                     <h1 class="hero-name">Juan Pedro Zingoni</h1>
-                    <div class="hero-bio">
-                        <p>I hold a degree in Economics from the Universidad Nacional del Sur, Bahía Blanca, Buenos Aires. I enjoy working with statistics, data visualization, and technology. I built my career around data, driven by a passion for in-depth analysis and finding value across different business areas.</p>
-                        <p>Throughout my career I have had the opportunity to work with clients from various industries, which allowed me to understand different business processes and how to adapt them to current times. In each project I have been involved in every stage: database connections, process automation, KPI creation, P&amp;L analysis, and dashboard development. I have worked with ERP systems such as Tango, Odoo, and Finnegans, giving me broad experience handling data across different business environments. I am currently expanding my knowledge of Artificial Intelligence to integrate these capabilities with my clients.</p>
+                    <div class="hero-bottom">
+                        <p class="hero-tagline">I love statistics, economics, and turning numbers into visualizations that make an impact.</p>
+                        <div class="hero-chart">
+                            <svg viewBox="0 0 400 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#0f1b4c" stop-opacity="0.18"/>
+                                        <stop offset="100%" stop-color="#0f1b4c" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- Grid lines -->
+                                <line x1="38" y1="20" x2="395" y2="20" stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="38" y1="55" x2="395" y2="55" stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="38" y1="90" x2="395" y2="90" stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="38" y1="125" x2="395" y2="125" stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="38" y1="155" x2="395" y2="155" stroke="#d1d5db" stroke-width="1.5"/>
+                                <!-- Fill area -->
+                                <path d="M 45,148 L 95,128 L 148,140 L 198,92 L 248,105 L 298,68 L 348,78 L 392,35 L 392,155 L 45,155 Z" fill="url(#areaGrad)"/>
+                                <!-- Line -->
+                                <polyline points="45,148 95,128 148,140 198,92 248,105 298,68 348,78 392,35" stroke="#0f1b4c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                                <!-- Data points -->
+                                <circle cx="45"  cy="148" r="3.5" fill="#0f1b4c"/>
+                                <circle cx="95"  cy="128" r="3.5" fill="#0f1b4c"/>
+                                <circle cx="148" cy="140" r="3.5" fill="#0f1b4c"/>
+                                <circle cx="198" cy="92"  r="3.5" fill="#0f1b4c"/>
+                                <circle cx="248" cy="105" r="3.5" fill="#0f1b4c"/>
+                                <circle cx="298" cy="68"  r="3.5" fill="#0f1b4c"/>
+                                <circle cx="348" cy="78"  r="3.5" fill="#0f1b4c"/>
+                                <circle cx="392" cy="35"  r="3.5" fill="#0f1b4c"/>
+                                <!-- Y labels -->
+                                <text x="30" y="24"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">100</text>
+                                <text x="30" y="59"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">75</text>
+                                <text x="30" y="94"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">50</text>
+                                <text x="30" y="129" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">25</text>
+                                <!-- X labels -->
+                                <text x="45"  y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Jan</text>
+                                <text x="95"  y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Feb</text>
+                                <text x="148" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Mar</text>
+                                <text x="198" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Apr</text>
+                                <text x="248" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">May</text>
+                                <text x="298" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Jun</text>
+                                <text x="348" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Jul</text>
+                                <text x="392" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9ca3af">Aug</text>
+                            </svg>
+                            <p class="chart-caption">* Illustrative data</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I hold a degree in Economics from the Universidad Nacional del Sur, Bahía Blanca, Buenos Aires. I enjoy working with statistics, data visualization, and technology. I built my career around data, driven by a passion for in-depth analysis and finding value across different business areas.</p>
+            <p>Throughout my career I have had the opportunity to work with clients from various industries, which allowed me to understand different business processes and how to adapt them to current times. In each project I have been involved in every stage: database connections, process automation, KPI creation, P&amp;L analysis, and dashboard development. I have worked with ERP systems such as Tango, Odoo, and Finnegans, giving me broad experience handling data across different business environments. I am currently expanding my knowledge of Artificial Intelligence to integrate these capabilities with my clients.</p>
         </div>
     </section>
 
