@@ -146,18 +146,18 @@ nav ul li a:hover { color: var(--navy) !important; }
 
 .data-trigger {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .btn-data-random {
     background: none;
-    border: 1.5px dashed var(--border);
+    border: 1.5px solid var(--border);
     color: var(--muted);
     font-family: var(--font-body);
     font-size: var(--text-sm);
     font-weight: 600;
     padding: 14px 32px;
-    border-radius: 100px;
+    border-radius: 6px;
     cursor: pointer;
     transition: border-color 0.2s, color 0.2s;
     letter-spacing: 0.02em;
