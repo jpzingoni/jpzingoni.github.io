@@ -140,10 +140,8 @@ nav ul li a:hover { color: var(--navy) !important; }
 .hero-tagline a {
     color: var(--navy);
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
 }
-
-.hero-tagline a:hover { text-decoration: underline; }
 
 /* Row 2: interactive data widget */
 .hero-bottom {
